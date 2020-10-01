@@ -1,37 +1,48 @@
 # bash commands
+`bash --version`
+`clear`
+`uptime`
+`history`
+`history -c`
+`cat .bash_history`
+## reverse search in shell history
+`Ctrl+R`
 
+## system date and time
+`date`
+
+## system information
 ```
-date
 uname
 uname -a
-host google.com
-hostname
-bash --version
-history
-history -c
 ```
 
-cat .bash_history
+## DNS lookup
+`host google.com`
 
-python -V
-clear
-uptime
+## system's host name
+`hostname`
+
+## python version
+'python -V'
 
 ## combine commands
-pwd; ls -l
+`pwd; ls -l`
 
 ## output to file
-(pwd; ls -l) > <filename>
+`(pwd; ls -l) > <filename>`
 
 ## move
+```
 mv source destination
 mv source/*.pdf destination
+```
 
 ## copy
-cp
+`cp`
 
 ## list directory
-ls
+`ls`
 
 ## list parent dir
 ls ..
@@ -41,86 +52,79 @@ ls ..
 ls ~
 
 ## all (hidden included)
-ls -a
+`ls -a`
 
 ## ls long
+```
 ls -l
 ls -l Documents/*.pdf
+```
 
 ## all long
-ls -al
+`ls -al`
 
 ## print current working dir
-pwd
+`pwd`
 
 ## change dir
-
-cd <dirname>
+`cd <dirname>`
 
 ## current dir
-.
+`.`
 
 ##parent dir
-..
+`..`
 
 ## home dir
-~
+`~`
 
-## create dir
+## create and remove dir
+`mkdir`
+`rmdir`
 
-mkdir
-
-rmdir
 ## informative remove
-rm -i <target>
+`rm -i <target>`
 
 ## remove not empty dir
-rm -r <dirname>
-
-## units of code
-## have name
-## take arguments
-
-## reverse search in shell history
-ctrl+R
+`rm -r <dirname>`
 
 ## view whole file concatenate
-cat <filename>
+`cat <filename>`
 
 ## view file fit in shell
-more <filename>
+`more <filename>`
 
 ## word count: lines, words, bytes
-wc <filename>
+`wc <filename>`
 
 ## count lines
-wc -l <filename>
+`wc -l <filename>`
 
 ## compare files
-diff <f1> <f2>
+`diff <f1> <f2>`
 
-##manual
-man <command name>
+## manual
+`man <command name>`
 
 ## sort file
-sort <filename>
+`sort <filename>`
 
 ## unique lines
-uniq <filename>
+`uniq <filename>`
 
 ## standart output
-sort <filane> > <sorted_filename>
+`sort <filane> > <sorted_filename>`
 
 ## standart input redirection
-cat < <filename>
+`cat < <filename>`
 
 ## show text file
-## q quit
-## D or space -- scroll page
-## U -- scroll up
-## < > -- skip first/last line
+`less <file>`
+q quit
+D or space -- scroll page
+U -- scroll up
+< > -- skip first/last line
 
-less <file>
 
 ## search <name> n or N next or previous
 
@@ -129,128 +133,141 @@ less <file>
 ## globbing
 * - wildcard
 
-ls *html
+```ls *html
 ls*s
 ls *pp*
 ls b*png
+```
 
 ## in brackets
 
-ls app.{css, html}
+`ls app.{css, html}`
 
 ## any one or several ?
-
+```
 ls bea?.png
 ls bea??.png
+```
 
 ## any one
 
-ls be[aeiou]r.png
+`ls be[aeiou]r.png`
 
 ## case sensitive
-ls *{jpg,JPG}
+`ls *{jpg,JPG}`
 
 ## login info
-who
+`who`
 
 ## output to file
-who > <filename>
+`who > <filename>`
 
 ## configuration files
-/etc
+`/etc`
 
 ## variable files expect to grow f.e logs
-/var
+`/var`
 
 ## executable binaries for all users necessary for boot
-/bin
+`/bin`
 
 ## super user bin system management applications
-/sbin
+`/sbin`
 
 ## libraries that support binaries
-/lib
+`/lib`
 
 ##user programs
-/usr
+`/usr`
 
 ## directories to look for program shell variable $
-echo $PATH
+`echo $PATH`
 
 ## lasts until you close shell
-PATH=$PATH:new/dir
+`PATH=$PATH:new/dir`
 
-
+## update
+```
 man apt-get
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get autoremove
+```
 
 ## users info
-/etc/passwd
+`/etc/passwd`
 
 ## sudo privilegies
-/etc/sudoers
+`/etc/sudoers`
 
 ## includes to sodoers
-## https://help.ubuntu.com/community/Sudoers
-sudo ls /etc/sudoers.d
+https://help.ubuntu.com/community/Sudoers
+`sudo ls /etc/sudoers.d`
 
-## r=4; w=2; x=1
-
-chmod _+_+_
+## permissions
+r=4; w=2; x=1
+`chmod _+_+_`
 
 ## change owner & group
-
+```
 sudo chown <name> <target>
 sudo chgrp <name> <target>
+```
 
 ## see url
-- L ## see linked
 
-curl -o google.html -L 'http://google.com'
+`curl -o google.html -L 'http://google.com'`
+- L (see linked)
 
 ## filter commands
+```
 grep
 more
 less
 sort
 uniq
+```
 
 ## filter examples
+```
 ls -la | more
 cat <filename> | wc
 man cat | grep file
 ls -l | grep txt | wc
 who | sort > <filename>
 sort <filename> | uniq | wc -l
+```
 
 ## grep and pipe
-
+```
 grep <obj> <file> | less
 grep shell dict.txt | less
 curl -L <url> | grep fish | wc -l
+```
 
 ## PS1 shell variable
-bashrcgenerator.com
+google bashrcgenerator
 
 ## short names for commands alias
-alias ll='la -la'
+`alias ll='la -la'`
 
 ## pupular aliases save to .bash_profile
-
+```
 alias .. ='cd ..'
 alias ll ='ls -la'
+```
 
 ## current processes status
+```
 ps
 ps -aef
 ps -aef | more
 ps -aef | sort | more
 ps -aef | sort > <outputfilename>
+```
 
 ## explaratory data analysis in UNIX
-
+```
 cat, grep, wc, sort, uniq
 head, tail, cut, sed, find
 head -5 <filename>
@@ -258,7 +275,10 @@ tail -3
 (head -2; tail -2) < <fromfilename>
 ## paste to file column by column
 paste <filename*> > <newfilename>
+```
 
 ## users running most processes
+```
 ps -aef | cut -c1-8 | sort | uniq -c | sort -nr | head -3
 ps -aef | cut -c1-8 | sort | grep root| wc -l
+```
