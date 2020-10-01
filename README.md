@@ -1,13 +1,15 @@
 # bash commands
 
+```
 date
 uname
 uname -a
-host udacity.com
+host google.com
 hostname
 bash --version
 history
 history -c
+```
 
 cat .bash_history
 
