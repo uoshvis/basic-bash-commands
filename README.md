@@ -177,7 +177,7 @@ ls bea??.png
 ## libraries that support binaries
 `/lib`
 
-##user programs
+## user programs
 `/usr`
 
 ## directories to look for program shell variable $
